@@ -1,13 +1,18 @@
 -
--
-### Bandit-ssh@
+- X.X
 
+#### This is the [Bandit by OverTheWire](https://overthewire.org/wargames/bandit/)
+
+OverTheWire Description: 
+> The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames. If you notice something essential is missing or have ideas for new levels, please let us know! This game, like most other games, is organised in levels. You start at Level 0 and try to “beat” or “finish” it. Finishing a level results in information on how to start the next level. The pages on this website for “Level <X>” contain information on how to start level X from the previous level. E.g. The page for [Level 1](https://overthewire.org/wargames/bandit/bandit1.html) has information on how to gain access from [Level 0](https://overthewire.org/wargames/bandit/bandit0.html) to [Level 1](https://overthewire.org/wargames/bandit/bandit1.html). All levels in this game have a page on this website, and they are all linked to from the sidemenu on the left of this page. 
+
+##### TimeForCode!!!
+#### - FirstCommands.
+
+- Initializing with primary commands in the lab. 
+```
 your@user: ssh bandit0@bandit.labs.overthewire.org -p 2220  
-The authenticity of host '[bandit.labs.overthewire.org]:2220 ([13.50.18.243]:2220)' can't be established.
-ED25519 key fingerprint is SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY.
-This key is not known by any other names
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added '[bandit.labs.overthewire.org]:2220' (ED25519) to the list of known hosts.
+
                          _                     _ _ _   
                         | |__   __ _ _ __   __| (_) |_ 
                         | '_ \ / _` | '_ \ / _` | | __|
@@ -18,8 +23,13 @@ Warning: Permanently added '[bandit.labs.overthewire.org]:2220' (ED25519) to the
                       This is an OverTheWire game server. 
             More information on http://www.overthewire.org/wargames
 
-bandit0@bandit.labs.overthewire.org's password: 
+bandit0@bandit.labs.overthewire.org's password: bandit0
 
+```
+
+
+- Next.
+```
 bandit0@bandit:~$ ls -lah
 total 24K
 drwxr-xr-x  2 root    root    4.0K Sep  1 06:30 .
@@ -28,22 +38,18 @@ drwxr-xr-x 49 root    root    4.0K Sep  1 06:30 ..
 -rw-r--r--  1 root    root    3.7K Jan  6  2022 .bashrc
 -rw-r--r--  1 root    root     807 Jan  6  2022 .profile
 -rw-r-----  1 bandit1 bandit0   33 Sep  1 06:30 readme
+```
 
+- Next. 
+```
 bandit0@bandit:~$ cat readme
-flag-bandit0to1: *****
+NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+```
 
-##
-##
-##
-
+- Next. 
+```
 bandit0@bandit:~$ ssh bandit1@bandit.labs.overthewire.org -p 2220
-The authenticity of host '[bandit.labs.overthewire.org]:2220 ([127.0.0.1]:2220)' can't be established.
-ED25519 key fingerprint is SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY.
-This key is not known by any other names
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
--
-Could not create directory '/home/bandit0/.ssh' (Permission denied).
-Failed to add the host to the list of known hosts (/home/bandit0/.ssh/known_hosts).
+
                          _                     _ _ _   
                         | |__   __ _ _ __   __| (_) |_ 
                         | '_ \ / _` | '_ \ / _` | | __|
@@ -55,7 +61,10 @@ Failed to add the host to the list of known hosts (/home/bandit0/.ssh/known_host
             More information on http://www.overthewire.org/wargames
 
 bandit1@bandit.labs.overthewire.org's password: (password-flag-bandit0to1)
+```
 
+-Next.
+```
 bandit1@bandit:~$ ls
 -
 bandit1@bandit:~$ ls -lah
@@ -67,19 +76,12 @@ drwxr-xr-x 49 root    root    4.0K Sep  1 06:30 ..
 -rw-r--r--  1 root    root    3.7K Jan  6  2022 .bashrc
 -rw-r--r--  1 root    root     807 Jan  6  2022 .profile
 bandit1@bandit:~$ cat ./-
-flag-bandit1to2: *****
+rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+```
 
-##
-##
-##
-
+- Next.
+```
 bandit1@bandit:~$ ssh bandit2@bandit.labs.overthewire.org -p 2220
-The authenticity of host '[bandit.labs.overthewire.org]:2220 ([127.0.0.1]:2220)' can't be established.
-ED25519 key fingerprint is SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY.
-This key is not known by any other names
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Could not create directory '/home/bandit1/.ssh' (Permission denied).
-Failed to add the host to the list of known hosts (/home/bandit1/.ssh/known_hosts).
                          _                     _ _ _   
                         | |__   __ _ _ __   __| (_) |_ 
                         | '_ \ / _` | '_ \ / _` | | __|
@@ -91,10 +93,12 @@ Failed to add the host to the list of known hosts (/home/bandit1/.ssh/known_host
             More information on http://www.overthewire.org/wargames
  
 bandit1@bandit.labs.overthewire.org's password: (password-flag-bandit1to2)
+```
 
+- Next.
+```
 bandit2@bandit:~$ ls 
 spaces in this filename
-
 bandit2@bandit:~$ ls -lah
 total 24K
 drwxr-xr-x  2 root    root    4.0K Sep  1 06:30 .
@@ -103,28 +107,30 @@ drwxr-xr-x 49 root    root    4.0K Sep  1 06:30 ..
 -rw-r--r--  1 root    root    3.7K Jan  6  2022 .bashrc
 -rw-r--r--  1 root    root     807 Jan  6  2022 .profile
 -rw-r-----  1 bandit3 bandit2   33 Sep  1 06:30 spaces in this filename
+``` 
 
+- Next. (force errors on purpose, to see the outputs)
+```
 bandit2@bandit:~$ cat < - spaces in this filename
 -bash: -: No such file or directory
+```
 
+- Next. (this is not correct)
+```
 bandit2@bandit:~$ cat ./- spaces\ in\ this\ filename 
 cat: ./-: No such file or directory
 (password=buggedhere)
+```
 
+- Next. (Right Way)
+```
 bandit2@bandit:~$ cat "spaces in this filename"
-flag-bandit2to3: *****
+aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+```
 
-##
-##
-##
-
+- Next. 
+```
 bandit2@bandit:~$ ssh bandit3@bandit.labs.overthewire.org -p 2220
-The authenticity of host '[bandit.labs.overthewire.org]:2220 ([127.0.0.1]:2220)' can't be established.
-ED25519 key fingerprint is SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY.
-This key is not known by any other names
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Could not create directory '/home/bandit2/.ssh' (Permission denied).
-Failed to add the host to the list of known hosts (/home/bandit2/.ssh/known_hosts).
                          _                     _ _ _   
                         | |__   __ _ _ __   __| (_) |_ 
                         | '_ \ / _` | '_ \ / _` | | __|
@@ -136,7 +142,10 @@ Failed to add the host to the list of known hosts (/home/bandit2/.ssh/known_host
             More information on http://www.overthewire.org/wargames
 
 bandit3@bandit.labs.overthewire.org's password: (password-flag-bandit2to3) 
+```
 
+- Next. 
+```
 bandit3@bandit:~$ ls 
 inhere
 bandit3@bandit:~$ ls -lah
@@ -147,7 +156,10 @@ drwxr-xr-x 49 root root 4.0K Sep  1 06:30 ..
 -rw-r--r--  1 root root 3.7K Jan  6  2022 .bashrc
 drwxr-xr-x  2 root root 4.0K Sep  1 06:30 inhere
 -rw-r--r--  1 root root  807 Jan  6  2022 .profile
+```
 
+- Next.
+```
 bandit3@bandit:~$ cd inhere/
 
 #inside in directory
@@ -157,13 +169,139 @@ total 12K
 drwxr-xr-x 2 root    root    4.0K Sep  1 06:30 .
 drwxr-xr-x 3 root    root    4.0K Sep  1 06:30 ..
 -rw-r----- 1 bandit4 bandit3   33 Sep  1 06:30 .hidden
+```
 
+- Next.
+```
 bandit3@bandit:~/inhere$ nano .hidden
 Unable to create directory /home/bandit3/.local/share/nano/: No such file or directory
 It is required for saving/loading search history or cursor positions.
 
 #result(password inside the file)
+
 bandit3@bandit:~/inhere$ (inside the nano press ctrl+x, next NO: ready is done) 
+```
 
+- Next. 
+```
+bandit3@bandit:~/inhere$ ssh bandit4@bandit.labs.overthewire.org -p 2220
+                         _                     _ _ _   
+                        | |__   __ _ _ __   __| (_) |_ 
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_ 
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+                                                       
 
+                      This is an OverTheWire game server. 
+            More information on http://www.overthewire.org/wargames
 
+bandit4@bandit.labs.overthewire.org's password: (password-flag-bandit3to4) 
+```
+
+- Next. 
+```
+bandit4@bandit:~$ ls -lah
+total 24K
+drwxr-xr-x  3 root root 4.0K Sep  1 06:30 .
+drwxr-xr-x 49 root root 4.0K Sep  1 06:30 ..
+-rw-r--r--  1 root root  220 Jan  6  2022 .bash_logout
+-rw-r--r--  1 root root 3.7K Jan  6  2022 .bashrc
+drwxr-xr-x  2 root root 4.0K Sep  1 06:30 inhere
+-rw-r--r--  1 root root  807 Jan  6  2022 .profile
+```
+
+- Next. 
+```
+bandit4@bandit:~$ cd inhere/
+bandit4@bandit:~/inhere$ ls -lah
+total 48K
+drwxr-xr-x 2 root    root    4.0K Sep  1 06:30 .
+drwxr-xr-x 3 root    root    4.0K Sep  1 06:30 ..
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file00
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file01
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file02
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file03
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file04
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file05
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file06
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file07
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file08
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file09
+```
+
+- Next.
+```
+bandit4@bandit:~/inhere$ cat < -file07
+lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+```
+
+- Next. 
+```
+bandit4@bandit:~/inhere$ ssh bandit5@bandit.labs.overthewire.org -p 2220
+                         _                     _ _ _   
+                        | |__   __ _ _ __   __| (_) |_ 
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_ 
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+                                                       
+
+                      This is an OverTheWire game server. 
+            More information on http://www.overthewire.org/wargames
+
+bandit5@bandit.labs.overthewire.org's password: (password-flag-bandit4to5) 
+```
+
+- Next. 
+```
+bandit5@bandit:~$ ls -lah
+total 24K
+drwxr-xr-x  3 root root    4.0K Sep  1 06:30 .
+drwxr-xr-x 49 root root    4.0K Sep  1 06:30 ..
+-rw-r--r--  1 root root     220 Jan  6  2022 .bash_logout
+-rw-r--r--  1 root root    3.7K Jan  6  2022 .bashrc
+drwxr-x--- 22 root bandit5 4.0K Sep  1 06:30 inhere
+-rw-r--r--  1 root root     807 Jan  6  2022 .profile
+```
+
+- Next. 
+```
+bandit5@bandit:~$ cd inhere/
+bandit5@bandit:~/inhere$ ls -ll
+total 80
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere00
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere01
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere02
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere03
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere04
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere05
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere06
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere07
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere08
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere09
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere10
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere11
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere12
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere13
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere14
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere15
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere16
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere17
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere18
+drwxr-x--- 2 root bandit5 4096 Sep  1 06:30 maybehere19
+```
+
+- Next. 
+```
+bandit5@bandit:~/inhere$ find . -readable -size 1033c ! -executable
+./maybehere07/.file2
+```
+
+- Next. 
+```
+bandit5@bandit:~/inhere$ cat maybehere07/.file2
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+```
+
+### In the next commit Zz-zZ
+
+[Bandit, five to ten, here n-n](https://github.com/NBx95/OverTheWire-labs/blob/main/Bandit-ssh-beginner/bandit0-ssh%40five-to-ten)
